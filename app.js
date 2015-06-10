@@ -4,7 +4,7 @@ const express = require('express')
 app.use(express.static('.'))
 
 app.get('/users', function (req, res) {
-  res.json(users)
+  res.json(users.map(function(user){ return {id: user.id} }));
 });
 
 app.get('/users/:id', function (req, res) {
