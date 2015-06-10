@@ -4,9 +4,11 @@ const express = require('express')
 app.use(express.static('.'))
 
 app.get('/users', function (req, res) {
+  res.json(users);
+});
+app.get('/users-ids', function (req, res) {
   res.json(users.map(function(user){ return {id: user.id} }));
 });
-
 app.get('/users/:id', function (req, res) {
   var rand = Math.floor(Math.random() * 500) + 700
   setTimeout(function () {
