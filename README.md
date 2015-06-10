@@ -15,7 +15,7 @@
 
 ### Solve the following problem:
 
-- Get all users from `/users` (already done for you)
+- Get all user ids from `/users-ids`
 - For each user, get their individual info asynchronously from `/users/:id`
 - Tally their "likes", and _after_ all requests are made, display on the screen
 
